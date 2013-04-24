@@ -15,6 +15,7 @@
 			"app/commands",
 			"app/controllers",
 			"app/models",
+			"app/libraries",
 			"app/tests/TestCase.php",
 			"app/tests/ControllerTestCase.php",
 			"app/tests/AcceptanceTestCase.php"

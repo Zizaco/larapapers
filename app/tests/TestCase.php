@@ -44,6 +44,6 @@ class TestCase extends Illuminate\Foundation\Testing\TestCase {
     {
         $db = LMongo::connection();
         $db->$collection->drop();
-    }    
+    }
 
 }
