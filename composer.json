@@ -1,0 +1,32 @@
+{
+	"require": {
+		"way/generators": "dev-master",
+		"zizaco/lessy": "dev-master",
+		"jasonlewis/basset": "dev-master"
+	},
+	"require-dev": {
+		"zizaco/factory-muff": "*",
+		"mockery/mockery": "*",
+		"alexandresalome/php-selenium": "1.0.1",
+		"behat/behat": "2.4.*@dev"
+	},
+	"autoload": {
+		"classmap": [
+			"app/commands",
+			"app/controllers",
+			"app/models",
+			"app/tests/TestCase.php",
+			"app/tests/ControllerTestCase.php",
+			"app/tests/AcceptanceTestCase.php"
+		]
+	},
+
+	"scripts": {
+		"pre-update-cmd": "php -r \"@unlink('bootstrap/compiled.php');\"",
+	    "post-update-cmd": "php artisan optimize"
+	},
+	"config": {
+		"preferred-install": "dist"
+	},
+	"minimum-stability": "dev"
+}
