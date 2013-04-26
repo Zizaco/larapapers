@@ -1,5 +1,6 @@
 {
 	"require": {
+		"laravel/framework": "dev-master#fc9760ad63e2421e484410394fd97e393fb21962",
 		"way/generators": "dev-master",
 		"zizaco/lessy": "dev-master",
 		"jasonlewis/basset": "dev-master"
@@ -7,8 +8,7 @@
 	"require-dev": {
 		"zizaco/factory-muff": "*",
 		"mockery/mockery": "*",
-		"alexandresalome/php-selenium": "1.0.1",
-		"behat/behat": "2.4.*@dev"
+		"guilhermeguitte/behat-laravel": "dev-master"
 	},
 	"autoload": {
 		"classmap": [
