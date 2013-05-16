@@ -17,7 +17,7 @@ Route::get('/', function()
 });
 
 /**
- * OcassionsController
+ * OccasionsController
  */
-Route::get('ocassions', 'OcassionsController@index');
-Route::resource('ocassion', 'OcassionsController');
+Route::get('occasions', 'OccasionsController@index');
+Route::resource('occasion', 'OccasionsController');

@@ -9,7 +9,7 @@ class OccasionsController extends \BaseController {
 	 */
 	public function index()
 	{
-		//
+		$occasions = Occasion::all();
 	}
 
 	/**
