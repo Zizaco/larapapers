@@ -15,3 +15,9 @@ Route::get('/', function()
 {
 	return View::make('hello');
 });
+
+/**
+ * OcassionsController
+ */
+Route::get('ocassions', 'OcassionsController@index');
+Route::resource('ocassion', 'OcassionsController');
