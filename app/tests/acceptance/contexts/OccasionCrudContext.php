@@ -9,5 +9,20 @@ use Behat\Gherkin\Node\PyStringNode,
 
 class OccasionCrudContext extends BaseContext {
 
-    public function __construct() { }
+    /**
+     * @Given /^A clean "([^"]*)" collection$/
+     */
+    public function aCleanCollection($collection)
+    {
+        $connection = App::make('MongoLidConnector')->getConnection();
+        $database = Config::get(
+            'database.mongodb.default.database',
+            'mongolid'
+        );
+
+        $connection->$database->$collection->drop();
+        $this->testCase()->assertEquals(
+            0, $connection->$database->$collection->count()
+        );
+    }
 }
