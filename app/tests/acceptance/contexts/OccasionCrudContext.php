@@ -25,4 +25,26 @@ class OccasionCrudContext extends BaseContext {
             0, $connection->$database->$collection->count()
         );
     }
+
+    /**
+     * @When /^I have "([^"]*)" which the type is "([^"]*)"$/
+     */
+    public function iHaveWhichTheTypeIs($class, $kind)
+    {
+        $class = 'test'.$class.'Provider';
+
+        $this->$kind = $class::saved($kind);
+    }
+
+    /**
+     * @Then /^I should see the "([^"]*)" at "([^"]*)"$/
+     */
+    public function iShouldSeeTheAt($resource, $url)
+    {
+        $resource = $this->$resource;
+
+        $this->testCase()->requestUrl('GET', $url);
+
+        $this->testCase()->assertBodyHasText($resource->name);
+    }
 }

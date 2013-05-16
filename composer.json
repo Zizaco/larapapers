@@ -3,6 +3,7 @@
 		"laravel/framework": "4.0.*",
 		"zizaco/mongolid-laravel": "dev-master",
 		"zizaco/lessy": "dev-master",
+		"zizaco/factory-muff": "dev-master",
 		"way/generators": "dev-master",
 		"zizaco/testcases-laravel": "dev-master",
 		"guilhermeguitte/behat-laravel": "dev-master"
@@ -14,7 +15,9 @@
 			"app/models",
 			"app/database/migrations",
 			"app/database/seeds",
-			"app/tests/TestCase.php"
+			"app/tests/TestCase.php",
+			"app/tests/data/",
+			"app/libraries"
 		]
 	},
 	"scripts": {
