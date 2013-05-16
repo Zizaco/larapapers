@@ -116,6 +116,7 @@ return array(
 		'Zizaco\MongolidLaravel\MongolidServiceProvider',
 		'Zizaco\Lessy\LessyServiceProvider',
 		'Way\Generators\GeneratorsServiceProvider',
+		'GuilhermeGuitte\BehatLaravel\BehatLaravelServiceProvider',
 
 	),
 

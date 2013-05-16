@@ -3,7 +3,9 @@
 		"laravel/framework": "4.0.*",
 		"zizaco/mongolid-laravel": "dev-master",
 		"zizaco/lessy": "dev-master",
-		"way/generators": "dev-master"
+		"way/generators": "dev-master",
+		"zizaco/testcases-laravel": "dev-master",
+		"guilhermeguitte/behat-laravel": "dev-master"
 	},
 	"autoload": {
 		"classmap": [
