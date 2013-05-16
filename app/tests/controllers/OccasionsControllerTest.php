@@ -4,6 +4,8 @@ use Mockery as m;
 
 class OccasionsControllerTest extends Zizaco\TestCases\ControllerTestCase
 {
+    use TestHelper;
+
     /**
      * Clean collection between every test
      */
@@ -40,16 +42,4 @@ class OccasionsControllerTest extends Zizaco\TestCases\ControllerTestCase
         $this->assertRequestOk();
     }
 
-    /**
-     * Clean database collection
-     */
-    protected function cleanCollection( $collection )
-    {
-        $database = Config::get('database.mongodb.default.database');
-
-        $connector = new Zizaco\Mongolid\MongoDbConnector;
-        $connection = $connector->getConnection();
-
-        $connection->$database->$collection->drop();
-    }
 }
