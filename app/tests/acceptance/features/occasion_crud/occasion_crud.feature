@@ -10,13 +10,13 @@ Scenario: Listing Occasions
 
 Scenario: Creating Occasions
     Given A clean "ocassions" collection
-    And I access "admin//create"
+    And I access "occasion/create"
     When I submit the form with "Occasion" which the type is "valid_occasion"
     Then I should see the "valid_occasion" at "occasions"
 
 Scenario: Updating Occasions
     Given I have "Occasion" which the type is "valid_occasion"
-    And I access "admin//edit"
+    And I access "occasion/random_event_a/edit"
     When I submit the form with "Occasion" which the type is "another_valid_occasion"
     Then I should see the "another_valid_occasion" at "occasions"
     And I should not see the "valid_occasion" at "occasions"

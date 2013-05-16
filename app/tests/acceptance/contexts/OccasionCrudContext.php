@@ -47,4 +47,14 @@ class OccasionCrudContext extends BaseContext {
 
         $this->testCase()->assertBodyHasText($resource->name);
     }
+
+    /**
+     * @Given /^I access "([^"]*)"$/
+     */
+    public function iAccess($url)
+    {
+        $this->testCase()->requestUrl('GET', $url);
+
+        $this->testCase()->assertRequestOk();
+    }
 }
