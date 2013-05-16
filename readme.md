@@ -1,12 +1,8 @@
-## Laravel 4.x
+# Larapapers
 
-### A Framework For Web Artisans
+### Made with a Framework for Web Artisans
 
-[Official Documentation](http://four.laravel.com) (Under Active Development)
-
-### Contributing To Laravel
-
-**All issues and pull requests should be filed on the [laravel/framework](http://github.com/laravel/framework) repository.**
+[Laravel 4 Documentation](http://four.laravel.com) (Under Active Development)
 
 ### License
 
