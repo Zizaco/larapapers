@@ -1,0 +1,74 @@
+.image-replacement {
+  text-indent: -9999px !important;
+}
+body {
+  margin: 0;
+  font-family: pt-sans-caption, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  color: #444;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 10px 0;
+  font-family: pt-sans-narrow, serif;
+  font-weight: bold;
+  line-height: 20px;
+  color: inherit;
+  text-rendering: optimizelegibility;
+}
+h1 {
+  font-size: 46px;
+}
+h2 {
+  font-size: 38px;
+}
+h3 {
+  font-size: 29px;
+}
+h4 {
+  font-size: 19px;
+}
+small {
+  opacity: 0.7;
+}
+a {
+  color: #3fa757;
+  text-decoration: none;
+  transition: all 0.15s;
+  -moz-transition: all 0.15s;
+  -webkit-transition: all 0.15s;
+  -o-transition: all 0.15s;
+}
+@media all and (max-width: 768px) {
+  a:nth-of-type(odd) .post {
+    background-color: #F0F9F2;
+  }
+}
+a:hover {
+  background-color: #3fa757;
+  color: #fff;
+}
+p {
+  text-align: justify;
+}
+div.maincontent {
+  max-width: 1000px;
+  margin: auto;
+  padding: 40px;
+}
+@media all and (max-width: 768px) {
+  div.maincontent {
+    padding: 10px;
+    padding-top: 10px !important;
+  }
+}
+@media all and (min-width: 769px) {
+  div.maincontent {
+    margin-top: 40px;
+  }
+}
