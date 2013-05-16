@@ -2,6 +2,13 @@
 
 class OccasionsController extends \BaseController {
 
+	protected $occasionRepo;
+
+    function __construct( \OccasionRepository $occasionRepo )
+    {
+        $this->occasionRepo = $occasionRepo;
+    }
+
 	/**
 	 * Display a listing of the resource.
 	 *
@@ -9,7 +16,19 @@ class OccasionsController extends \BaseController {
 	 */
 	public function index()
 	{
-		$occasions = Occasion::all();
+		$page = Input::get('page');
+
+        $occasions = $this->occasionRepo->search( Input::get('search'), Input::get('deactivated') );
+        $total_pages = $this->occasionRepo->pageCount( $occasions );
+        $occasions = $this->occasionRepo->paginate( $occasions, $page );
+
+        $viewData = [
+            'occasions' => $occasions,
+            'page' => $page,
+            'total_pages' => $total_pages,
+        ];
+
+        return View::make('occasions.index', $viewData);
 	}
 
 	/**

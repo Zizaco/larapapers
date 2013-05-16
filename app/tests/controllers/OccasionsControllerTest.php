@@ -28,6 +28,13 @@ class OccasionsControllerTest extends Zizaco\TestCases\ControllerTestCase
      */
     public function testShouldIndex(){
 
+        // Make sure that search and paginate will be called at leas
+        // once
+        $occasionRepo = m::mock(new OccasionRepository);
+        $occasionRepo->shouldReceive('search')->once()->passthru();
+        $occasionRepo->shouldReceive('paginate')->once()->passthru();
+        App::instance("OccasionRepository", $occasionRepo);
+
         // Do request
         $this->requestUrl('GET', 'occasions');
         $this->assertRequestOk();
