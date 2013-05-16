@@ -1,7 +1,8 @@
 {
 	"require": {
 		"laravel/framework": "4.0.*",
-		"zizaco/mongolid-laravel": "dev-master"
+		"zizaco/mongolid-laravel": "dev-master",
+		"jasonlewis/basset": "dev-master"
 	},
 	"autoload": {
 		"classmap": [
